@@ -7,10 +7,14 @@ import com.training.day3.entities.Person;
 import com.training.day4.entities.Account;
 import com.training.day4.entities.CheckingAccount;
 import com.training.day4.entities.SavingAccount;
+import com.training.day4.services.BankingServices;
+import com.training.day5.customexceptions.LessFundException;
 
 public class App {
 
 	public static void main(String[] args) {
+		
+		try {
 		//how to create a Person object with a call to the constructor with 6 args
 		Address address = new Address("The Signature","MGM Road","Pune","3434344","Opp school");
 		
@@ -50,6 +54,12 @@ public class App {
 		
 		Account mohanAccount2 = new CheckingAccount(78888, 200000, 100000);
 		
+		//can I instantiate a interface 
+		//BS bs = new BS();
+		//I can use Liskov's sub
+		//where i cancreate reference variable of interface type or base class type /parent type and an object of child or implementation class
+		
+		BankingServices mohanAccount3 = new CheckingAccount(434344, 50000, 25000);
 		
 		System.out.println(p1.getName() +p1.getDob());
 
@@ -62,8 +72,20 @@ public class App {
 		System.out.println(p3);
 		System.out.println(Person.getCtr());
  
-		
-		
+	    mohanAccount3.transferFundsToAnotherAccount(hetalAccount2, 2000000);
+	    
+	    ((BankingServices)mohanAccount2).transferFundsToAnotherAccount(hetalAccount2, 11111);
+	    System.out.println(hetalAccount2.getBalance());
+	    System.out.println(mohanAccount2.getBalance());
+	    if (mohanAccount3 instanceof CheckingAccount)
+	    System.out.println(((CheckingAccount)mohanAccount3).getBalance());
+	    
+	    
+		}
+		catch(LessFundException lf) {
+			System.out.println("not enough funds");
+			System.out.println(lf.getMessage());
+		}
 		
 
 	}

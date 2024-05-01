@@ -3,6 +3,7 @@ package com.training.day4.services;
 import com.training.day4.entities.Account;
 import com.training.day4.entities.CheckingAccount;
 import com.training.day4.entities.SavingAccount;
+import com.training.day5.customexceptions.LessFundException;
 
 //prior to 1.8 all the methods in interfaces were abstract 
 //100% abstraction
@@ -14,12 +15,12 @@ public interface BankingServices {
 	//we will declare the methods
 	
 	//deposit withdrawl transfer of funds from 1 acct to another
-	
+			
 	public void deposit(double amtToBeDeposited);
 	
-	public void withdrawl(double amtToBeWithdrawn);
+	public void withdrawl(double amtToBeWithdrawn) throws LessFundException;
 	
-	public default void transferFundsToAnotherAccount(Account account,double amtToBeTransfered) {
+	public default void transferFundsToAnotherAccount(Account account,double amtToBeTransfered)  throws LessFundException{
 		
 		this.withdrawl(amtToBeTransfered);
 
