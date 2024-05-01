@@ -15,7 +15,11 @@ public interface BankingServices {
 	//we will declare the methods
 	
 	//deposit withdrawl transfer of funds from 1 acct to another
+<<<<<<< HEAD
 			
+=======
+	//methods are by default abstract in an interface ,unless you specify them as static or default in which case your interface will have its implementation
+>>>>>>> a8e205c9486d39a6a63a435a3c4b50ad9eee2759
 	public void deposit(double amtToBeDeposited);
 	
 	public void withdrawl(double amtToBeWithdrawn) throws LessFundException;
