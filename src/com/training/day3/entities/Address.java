@@ -11,7 +11,7 @@ package com.training.day3.entities;
 //plus toString
 //plus equals hashcode 
 //business logic method for this class
-
+//java.lang.Object  --is a cosmic parent
 public class Address {
 	
 	private String bldgName;
@@ -42,9 +42,10 @@ public class Address {
 
 	//most of the codes for POJO will be generated automatically thru IDE features
 	@Override
+	
 	public String toString() {
 		
-		return this.streetName+ this.city+this.pincode;
+		return this.streetName+ this.city+this.pincode+this.bldgName+this.landmark;
 	}
 
 }
