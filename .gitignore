@@ -1,0 +1,7 @@
+ # .gitignore
+   # Ignore compiled bytecode and IDE-specific files
+   *.class
+   *.jar
+   .idea/
+   # Ignore build output directory
+   target/
