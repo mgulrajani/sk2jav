@@ -1,5 +1,6 @@
 package com.training.day3.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import com.training.day4.entities.Account;
@@ -17,7 +18,7 @@ import com.training.day4.entities.Account;
 
 //what is the sole purpose of this class Person
 //defining the template of Person,what necessary data and code, a Person object should have
-public class Person {
+public class Person implements Serializable {
 	//you keep the data private 
 	//6 instance variables
 	//every instance ,every object of Person will have id name mn em add dob

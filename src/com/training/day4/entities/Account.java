@@ -1,5 +1,7 @@
 package com.training.day4.entities;
 
+import java.io.Serializable;
+
 //entity Account  
 
 //POJO
@@ -13,7 +15,7 @@ package com.training.day4.entities;
 //plus equals hashcode 
 //business logic method for this class
 
-public class Account {
+public class Account  implements Serializable{
 
 	//2 attributes /data members /instance variables that are private 
 	private long id;

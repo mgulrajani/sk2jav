@@ -1,4 +1,7 @@
 package com.training.day3.entities;
+
+import java.io.Serializable;
+
 //sole purpose class of this class should be only to define Address
 
 //POJO
@@ -12,7 +15,7 @@ package com.training.day3.entities;
 //plus equals hashcode 
 //business logic method for this class
 //java.lang.Object  --is a cosmic parent
-public class Address {
+public class Address implements Serializable {
 	
 	private String bldgName;
 	private String streetName;

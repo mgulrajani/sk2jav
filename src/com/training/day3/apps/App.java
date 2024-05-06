@@ -13,7 +13,9 @@ import com.training.day5.customexceptions.LessFundException;
 public class App {
 
 	public static void main(String[] args) {
+		//try(){} //files or jdbc
 		
+		//try{ }catch(){}
 		try {
 		//how to create a Person object with a call to the constructor with 6 args
 		Address address = new Address("The Signature","MGM Road","Pune","3434344","Opp school");
@@ -81,12 +83,24 @@ public class App {
 	    System.out.println(((CheckingAccount)mohanAccount3).getBalance());
 	    
 	    
+	    
+	    
+	    
 		}
 		catch(LessFundException lf) {
+			
 			System.out.println("not enough funds");
 			System.out.println(lf.getMessage());
 		}
 		
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("some exception has occured");}
+		
+		finally {
+			
+			System.out.println("this instruction will always get executed ");
+		}
 
 	}
 }

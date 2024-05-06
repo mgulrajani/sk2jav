@@ -2,6 +2,7 @@ package com.training.day5.customexceptions;
 
 //here we are creating our own custom exception class which we will throw when funds are less
 public class LessFundException extends Exception {
+	
 	private String message;
    
 	public String getMessage() {
